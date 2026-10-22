@@ -1,0 +1,4 @@
+interface:
+  display_name: "Acetate Flow"
+  short_description: "JSON-driven workflow diagrams with looping playback"
+  default_prompt: "Use $acetate-flow to turn this workflow into reusable JSON and a compact, interactive HTML diagram."

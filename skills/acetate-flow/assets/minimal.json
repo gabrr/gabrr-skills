@@ -1,0 +1,12 @@
+{
+  "title": "Workflow",
+  "board": {"width": 760, "height": 250, "scale": 1},
+  "samples": {"rows": [{"id": "item1", "value": "Example"}]},
+  "nodes": [
+    {"id": "input", "kind": "data", "x": 120, "y": 110, "title": "Input", "subtitle": "Example data", "input": "Source", "output": "Rows", "data": {"$ref": "rows"}},
+    {"id": "process", "kind": "tool", "x": 380, "y": 110, "title": "Process", "subtitle": "Deterministic code", "input": "Rows", "output": "Processed rows", "data": {"$ref": "rows"}},
+    {"id": "result", "kind": "output", "x": 640, "y": 110, "title": "Results", "input": "Processed rows", "output": "Visible results", "data": {"$ref": "rows"}}
+  ],
+  "edges": [{"from": "input", "to": "process"}, {"from": "process", "to": "result"}],
+  "scenarios": [{"id": "standard", "label": "Run workflow", "path": ["input", "process", "result"]}]
+}
