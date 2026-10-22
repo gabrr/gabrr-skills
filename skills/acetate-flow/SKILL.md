@@ -21,6 +21,7 @@ An AI-assisted alternative to Mermaid for interactive workflow diagrams: identif
 - Content-sized boxes with **8px padding on every side**. Preserve consistent border width across active states; recompute arrow endpoints from measured dimensions.
 - Tiny bottom-right legend. One small bottom-center dock: scenario choices alongside icon playback controls. Small sun/moon toggle top-right, with remembered preference and system-theme default.
 - Distinguish paid intelligence (robot), deterministic tools, generated data, code branches and final outputs. Use brief titles and real example payloads, revealing details only in the inspector.
+- Two-finger scrolling pans; pinch zooms around the pointer. Keep generous space around the board so nodes can move clear of fixed controls. Manual pan/zoom disables Follow; Fit recenters. Include small zoom buttons and keyboard +/−/0.
 - Playback loops continuously while running. Preserve pause, previous/next, reset, speed, follow and fit. Inspection or hiding the tab pauses; returning/closing does not silently resume.
 - Preserve accessible labels, focus handling, keyboard dialog controls and reduced-motion behavior. Keep example data honest about simulations; HTML performs no real research or AI calls.
 

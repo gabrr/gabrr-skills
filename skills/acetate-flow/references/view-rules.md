@@ -4,7 +4,7 @@ Read this when changing the shared renderer. Ordinary workflow changes belong in
 
 ## Surface and visual language
 
-Canvas: 100% width × `100dvh`, native scroll for overflow, centered board wrapper, subtle 16px dot grid. No visible header, title, branding, counters, progress banner, or footer. Keep descriptive browser title and screen-reader status.
+Canvas: 100% width × `100dvh`, native scroll with one viewport of empty space on every side, centered board wrapper, subtle 16px dot grid. No visible header, title, branding, counters, progress banner, or footer. Keep descriptive browser title and screen-reader status.
 
 Nodes use intrinsic width/height, 8px padding, 6px corners, grid layout: type icon/tag plus expand indicator, short title, optional subtitle. Reference typography: ~11.5px title, 9px subtitle, 8px type tag. No fixed 166×76 constraint. Active styling must not change geometry. Measure boxes before routing and again on resize; ports meet their borders.
 
@@ -25,6 +25,12 @@ Dark: canvas #171e1b, surfaces #222b26, ink #e5eae7, muted #a1ada7, rule #35423e
 Small sun/moon icon button top-right, reflecting the action available. Initial theme uses saved choice, otherwise system preference. Persist under `acetate-flow-theme`; storage failures must not break rendering. Theme applies to nodes, connectors/labels/arrows, dock, controls, legend, inspector, JSON and backdrop.
 
 Tiny bottom-right legend sits above a compact bottom-center floating dock. The dock combines scenario buttons and icon controls in one row; narrow displays can scroll it horizontally. Keep accessible labels/tooltips despite the small visual footprint.
+
+## Canvas navigation
+
+Two-finger scrolling pans horizontally and vertically, including when the whole board fits. Ctrl-wheel/trackpad pinch zooms around the pointer; handle Safari gesture events without double zooming. Two-touch gestures combine pinch and translation. Keep the page and fixed dock unscaled. Manual pan/zoom disables Follow so playback does not pull the canvas back. Empty space lets edge nodes clear fixed overlays.
+
+Small − / percentage / + / Fit controls; keyboard +/− zooms and 0 fits. Fit recenters configured bounds. Reset/scenario changes restore the home position. Zoom is bounded to 5–400%; saved initial scale remains configurable. Follow positions must include the board wrapper offset.
 
 ## Connections and playback
 
@@ -55,6 +61,6 @@ Keep DOM IDs synchronized with handlers. Renderer slot `{{FLOW_JSON}}` occurs ex
 
 ## Verification
 
-Check each scenario's IDs/edges, intended branch and terminal, repeated loops, pause/resume, one animation chain, scenario switching, every inspector payload, sample references, theme storage and labels, manual navigation, resize/fit and dialog keyboard/focus. Confirm no script/link runtime dependencies. Browser screenshots verify layout; simulated DOM checks do not.
+Check each scenario's IDs/edges, intended branch and terminal, repeated loops, pause/resume, one animation chain, scenario switching, every inspector payload, sample references, theme storage and labels, manual navigation, resize/fit, pointer-anchored pinch, two-axis panning at Fit, manual-navigation Follow cancellation, zoom limits and dialog keyboard/focus. Confirm no script/link runtime dependencies. Browser screenshots verify layout; simulated DOM checks do not.
 
 The classification and an unrelated workflow were exercised in simulated DOM tests during packaging. Recheck after engine changes rather than treating this as proof of future versions.
