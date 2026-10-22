@@ -1,6 +1,6 @@
 ---
 name: learn-layered
-description: Teach a difficult concept through a visual, an analogy, and increasingly concrete examples—tiny, bigger, then complete. Use for layered explanations or requests to understand how something works. For several connected concepts, consider an interactive visual lesson instead of a single explanation.
+description: Teach a concept visually, then grow one concrete example by adding one meaningful part per layer. Choose the number of layers to fit the subject. Use for layered explanations or requests to understand how something works. For several connected concepts, consider an interactive visual lesson instead of a single explanation.
 ---
 
 # Learn Layered
@@ -11,7 +11,7 @@ Teach the subject itself. Do not describe a teaching plan instead of teaching. L
 
 Respect the learner's chosen format and existing conversation preferences. Otherwise distinguish:
 
-- **One concept:** a compact visual explanation followed by analogy, tiny example, bigger example, complete example. Keep this in the conversation; HTML is not the default.
+- **One concept:** a compact visual and analogy, then a small real example that grows cumulatively until the learning goal is met. Keep this in the conversation; HTML is not the default.
 - **A collection of connected concepts:** consider interactive HTML when navigation, comparison, state changes or relationships would make the system easier to understand. A difficult concept alone does not justify building a website.
 
 If the scope/format is genuinely unclear and would change the work substantially, ask one short question: “One concept step by step, or an interactive view of the whole system?” Do not ask a format question every time or reconfirm an explicit choice. If the topic is broad, narrow to a coherent example unless the learner wants the entire system.
@@ -24,17 +24,20 @@ If the scope/format is genuinely unclear and would change the work substantially
 
 Do not create an image for every layer. Reuse or extend the first mental model. If image tools or HTML are unavailable, disclose the limitation briefly and use the best available representation; never claim to have generated an image that is only a text sketch.
 
-## Build the layers
+## Grow one example; do not fill a five-stage template
 
-Keep the same subject, actors and example throughout. Each layer adds one conceptual part, while making the previous parts more concrete.
+The subject determines the number of layers. “Tiny,” “bigger,” and “complete” describe the example's increasing concreteness, not three mandatory layers or visible lesson titles.
 
-1. **Visual:** show the central idea before introducing terminology. Identify only the few parts needed to read the picture.
-2. **Analogy:** connect that idea to something familiar. Map the analogy to the real parts, and name its main limit when it would otherwise mislead.
-3. **Tiny example:** show the smallest actual instance. For software, a short runnable fragment or an explicit input/output is often enough.
-4. **Bigger example:** extend that same instance with the next necessary mechanism. When useful, show the limitation that makes this addition necessary and what it improves. Do not manufacture problems merely to follow a template.
-5. **Complete example:** connect the pieces into one realistic end-to-end case. Show the concrete result and how the earlier pieces participate. “Complete” is relative to the learning goal; avoid production boilerplate that obscures it.
+- Start with a meaningful visual and a familiar analogy. These can share a layer when the image itself conveys the analogy. Map its important parts to the real subject.
+- After the analogy, switch to the smallest concrete version of the real example. Keep that example, its actors, values, and visual positions throughout.
+- Add **one meaningful part per layer**. Retain earlier parts and highlight only the addition. Show the same data or action moving through the expanding system. A layer can reveal a mechanism already hidden inside an earlier box.
+- Use actual mechanism titles: “The request arrives,” “Choose the handler,” “Read the body,” rather than “Tiny,” “Bigger,” and “Complete.”
+- Add as many intermediate layers as the subject needs. Don't jump from a two-line snippet to a full implementation, replace the example with a different one, or restart the diagram every time.
+- Finish when the parts form the concrete outcome the learner asked about. Reveal the runnable implementation or detailed trace only after its pieces have been explained. Avoid unrelated production boilerplate.
 
-These are teaching stages, not a quota of five messages. Split a stage when it contains multiple new ideas; combine trivial transitions. Give all necessary layers when requested. Otherwise start with a small coherent layer and let the learner steer; don't force a quiz or approval after every step.
+For example, a server lesson might start with a restaurant kitchen analogy, then follow **one browser request**: send → arrive → route → read the body → validate → look up data → compute → respond → render. Those are possible mechanisms for that subject, not a mandatory list for every lesson. Show previously introduced mechanisms alongside each addition.
+
+When a new part solves a real limitation, show the limitation and the value added. Do not invent failures merely to justify another layer. Give all necessary layers when requested; otherwise begin with a coherent small layer and let the learner steer without a quiz or approval gate after every step.
 
 ## Keep it understandable
 
@@ -49,4 +52,4 @@ These are teaching stages, not a quota of five messages. Split a stage when it c
 
 When HTML is appropriate or requested, use rich scenes, mock interfaces, tokens/cards, meaningful diagrams and small demonstrations—not walls of text embedded in a webpage. Make one layer visible at a time, with direct navigation and an optional all-layers view. Put technical details behind expansion. Respect reduced motion and keyboard access.
 
-If the lesson is primarily a workflow and `$acetate-flow` is available, use its JSON renderer instead of rewriting the interface. It is optional: this skill works independently and does not require that skill, a browser, HTML, or image tools. Keep the analogy → tiny → bigger → complete progression even when the presentation is interactive.
+If the lesson is primarily a workflow and `$acetate-flow` is available, use its JSON renderer instead of rewriting the interface. It is optional: this skill works independently and does not require that skill, a browser, HTML, or image tools. Keep the cumulative example and subject-driven layer count even when the presentation is interactive.

@@ -1,4 +1,4 @@
 interface:
   display_name: "Learn Layered"
-  short_description: "Visual learning from analogy to complete examples"
-  default_prompt: "Use $learn-layered to help me understand this topic, from a visual model to a complete concrete example."
+  short_description: "Visual learning through one growing concrete example"
+  default_prompt: "Use $learn-layered to help me understand this topic, with a visual and analogy, then one concrete example that grows one part at a time."
