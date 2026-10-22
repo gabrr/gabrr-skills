@@ -1,11 +1,11 @@
 ---
 name: acetate-flow
-description: Create or edit compact Acetate-style workflow visualizations from JSON as standalone HTML, with typed nodes, expandable data, animated branches, looping playback, and light/dark mode. Use for an acetate-flow view or this workflow-diagram style, rather than general app screens.
+description: Create interactive workflow diagrams as an AI-assisted alternative to Mermaid. Identify data, tools, AI calls, and decisions, with a side panel for inspecting each node's inputs and outputs. Generate standalone HTML from JSON, with animated branches and light/dark mode. Use for workflow diagrams, not general app screens.
 ---
 
 # Acetate Flow
 
-Generate workflow JSON; reuse the renderer. The user should understand the diagram by watching and clicking, with minimal reading.
+An AI-assisted alternative to Mermaid for interactive workflow diagrams: identify what each piece is, then open its side panel to inspect concrete inputs and outputs. Help the user author workflow JSON and reuse the renderer, so they can understand the diagram by watching and clicking, with minimal reading. AI assists authoring; the generated HTML does not call a model.
 
 ## Default workflow
 

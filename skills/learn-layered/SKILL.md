@@ -1,11 +1,11 @@
 ---
 name: learn-layered
-description: Teach a concept visually, then grow one concrete example by adding one meaningful part per layer. Choose the number of layers to fit the subject. Use for layered explanations or requests to understand how something works. For several connected concepts, consider an interactive visual lesson instead of a single explanation.
+description: A visual learning framework for understanding one concept or several connected concepts. Begin with a visual and analogy, then grow one concrete example by adding one meaningful part per layer. Let the subject determine the layer count; consider interactive HTML for connected systems.
 ---
 
 # Learn Layered
 
-Teach the subject itself. Do not describe a teaching plan instead of teaching. Let the learner see one idea, connect it to something familiar, and progressively recognize it in a complete working example.
+A framework for learning one concept or a collection of connected concepts. Teach the subject itself. Do not describe a teaching plan instead of teaching. Let the learner see one idea, connect it to something familiar, and progressively recognize it in a complete working example.
 
 ## Choose the shape
 

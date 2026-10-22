@@ -1,10 +1,17 @@
 # gabrr-skills
 
-Two skills. See the result, then try a prompt.
+A catalog of independent skills. Pick what you need.
+
+| Skill | Purpose |
+| --- | --- |
+| [Acetate Flow](#acetate-flow) | An AI-assisted alternative to Mermaid, with typed nodes and inspectable data. |
+| [Learn Layered](#learn-layered) | A visual learning framework for one concept or several connected concepts. |
 
 ## acetate-flow
 
-The Acetate classification workflow: models, tools, data, and a research branch.
+Describe a workflow; AI builds the diagram from JSON. Clearly distinguish **data, tools, AI, and decisions**. Click a node to inspect its inputs and outputs in a side panel.
+
+The example below shows Acetate’s proposed classification workflow.
 
 ![Acetate workflow: extraction, grouping, context, classification and web research](assets/acetate-flow.gif)
 
@@ -17,7 +24,7 @@ classification, and web research for low-confidence results.
 
 ## learn-layered
 
-One concrete example, built piece by piece. The subject decides how many layers.
+Understand one concept—or a whole system of concepts—through visuals, analogy, and one concrete example that grows a part at a time. The subject determines the layers.
 
 ![How servers work: a kitchen analogy becomes one browser request, expanded mechanism by mechanism](assets/learn-layered.gif)
 
@@ -33,18 +40,19 @@ Use interactive HTML.
 
 [Follow the example](examples/how-servers-work.md) · [Run it](examples/how-servers-work.py) · [Skill](skills/learn-layered/SKILL.md)
 
-Images preferred; flows or text when simpler. HTML for connected systems.
+Images, flows, or text for individual concepts; interactive HTML when connected concepts benefit from it.
 
 <details>
 <summary>Install in Codex</summary>
 
-Ask Codex:
+Install either skill by asking Codex:
 
 ```text
-Use $skill-installer to install both:
+Use $skill-installer to install:
 https://github.com/gabrr/gabrr-skills/tree/main/skills/acetate-flow
-https://github.com/gabrr/gabrr-skills/tree/main/skills/learn-layered
 ```
+
+For Learn Layered, use `https://github.com/gabrr/gabrr-skills/tree/main/skills/learn-layered` instead. Each skill works independently.
 
 Or copy whole skill folders into `.agents/skills/`.
 

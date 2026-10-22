@@ -1,4 +1,4 @@
 interface:
   display_name: "Learn Layered"
-  short_description: "Visual learning through one growing concrete example"
-  default_prompt: "Use $learn-layered to help me understand this topic, with a visual and analogy, then one concrete example that grows one part at a time."
+  short_description: "A visual framework for learning concepts and systems"
+  default_prompt: "Use $learn-layered to help me understand this concept or connected system through a visual, an analogy, and a concrete example that grows one part at a time."
